@@ -1,0 +1,107 @@
+<html land="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Viewer</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,400&family=Sansita:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="nav">
+      <a href="index.html">
+        <div class="navItem isInactive">
+          <div class="navIcon">
+            <span class="material-icons">
+              terrain
+            </span>
+          </div>
+          <div class="navLabel">
+            <p class="nav">
+              The Land
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="ranch.html">
+        <div class="navItem isActive">
+          <div class="navIcon">
+            <span class="material-icons">
+              cottage
+            </span>
+          </div>
+          <div class="navLabel">
+            <p class="nav">
+              The Ranch
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="imagetracking.html">
+        <div class="navItem isInactive">
+          <div class="navIcon">
+            <span class="material-icons">
+              person
+            </span>
+          </div>
+          <div class="navLabel">
+            <p class="nav">
+              The People
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="contentContainer">
+      <div class="header">
+        <h1>Sleeping Rainbow Ranch</h1>
+      </div>
+      <div class="modelViewer">
+        <model-viewer
+          src="assets/low_poly_gaming_setup/scene.gltf"
+          camera-controls
+          autoplay
+          auto-rotate
+          ar
+          ios-src="assets/Cabin_into_forest.usdz"
+        >
+        <button class="arButton" slot="ar-button">
+          View ranch in AR
+        </button>
+      </model-viewer>
+      </div>
+      <div class="textContainer">
+        <h2>Gaming</h2>
+      </div>
+      <div class="modelViewer">
+        <model-viewer
+          src="assets/super_smash_bros_ultimate_-_ganondorf/scene.gltf"
+          camera-controls
+          autoplay
+          auto-rotate
+          ar
+          ios-src="assets/Cabin_into_forest.usdz"
+        >
+        <button class="arButton" slot="ar-button">
+          View ranch in AR
+        </button>
+      </model-viewer>
+      </div>
+      <div class="textContainer">
+        <h2>Ganondorf</h2>
+      </div>
+    </div>
+  </body>
+</html>
